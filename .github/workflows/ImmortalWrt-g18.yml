@@ -6,9 +6,9 @@ on:
     - cron: 0 20 * * *
 
 env:
-  REPO_URL: https://github.com/xiaomeng9597/immortalwrt-rk356x
+  REPO_URL: https://github.com/zhoufuli/immortalwrt-rk356x
   REPO_BRANCH: main
-  CONFIG_FILE: configs/g18_mtk_wifi.config
+  CONFIG_FILE: configs/g18-pro-docker.config
   DIY_SCRIPT: diy-mini.sh
   CLASH_KERNEL: arm64
   CACHE_TOOLCHAIN: true
@@ -77,7 +77,6 @@ jobs:
         sudo -E systemctl daemon-reload
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get -y clean
-        sudo -E bash -c 'bash <(curl -s https://build-scripts.immortalwrt.org/init_build_environment.sh)'
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /mnt/workdir
         sudo chown $USER:$GROUPS /mnt/workdir
