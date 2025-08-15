@@ -79,7 +79,7 @@ git_sparse_clone main https://github.com/linkease/istore luci
 
 
 # samba解除root限制
-sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
+# sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
 
 
 # 最大连接数修改为65535
